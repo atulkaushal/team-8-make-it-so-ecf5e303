@@ -9,8 +9,4 @@ For more information on how to use Cucumber and Specification by Example Tables,
 The UI is implemented using springshell in LevelUpGame.java. See https://docs.spring.io/spring-shell/docs/2.0.1.RELEASE/reference/htmlsingle/  To change the banner that displays when the app starts, edit src/main/resources/banner.txt. To change the prompt, change src/main/java/cli/LevelUpPrompt.java.
 
 To run, 'make build', then 'make run'. LevelUpMain contains the main method for the application. LevelUpGame contains the commands and routing. GameController is the domaincontroller.
-
-
-
-
-{Nancy and  Murali} were here
+{Nancy Herzog} was here
