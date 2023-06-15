@@ -2,6 +2,9 @@ package com.levelup.forestsandmonsters;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+
 import org.junit.Test;
 
 public class GameControllerTest {
@@ -36,6 +39,21 @@ public class GameControllerTest {
        assertEquals("Titans",gameController.character.getName());
     }
 
+    @Test
+    public void isGameStarted()
+    {
+        gameController.startGame();
 
+        assertTrue(gameController.isGameStarted);
+    }
+
+    
+    @Test
+    public void isGameNotStarted()
+    {
+        gameController.character=null;
+
+        assertFalse(gameController.isGameStarted);
+    }
    
 }

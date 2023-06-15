@@ -2,6 +2,7 @@ package com.levelup.forestsandmonsters;
 
 import java.awt.Point;
 import com.levelup.forestsandmonsters.cli.Character;
+import com.levelup.forestsandmonsters.cli.GameMap;
 
 public class GameController {
 
@@ -19,11 +20,14 @@ public class GameController {
 
     GameStatus status;
     Character character;
+    boolean isGameStarted;
+    GameMap gameMap;
 
     public GameController() {
         status = new GameStatus();
          //Instantiate character
          character = new Character();
+         gameMap = new GameMap();
        
     }
 
@@ -48,6 +52,23 @@ public class GameController {
         // TODO: Implement startGame - Should probably create tiles and put the character
         // on them?
         // TODO: Should also update the game results?
+        if(character!=null )
+        {
+           character.enterMap(gameMap);
+           Position position = character.getPosition();
+          int xCoordinate = position.getCoordinates().xCoordinate;
+          int yCoordinate = position.getCoordinates().yCoordinate;
+
+         
+          if(xCoordinate ==0 && yCoordinate ==0)
+          {
+            isGameStarted=true;
+            return;
+          }
+          
+
+        } 
+        isGameStarted=false;
          
     }
 
@@ -76,5 +97,7 @@ public class GameController {
         // testable
         return -10;
     }
+
+  
 
 }
