@@ -25,21 +25,21 @@ public class Character {
     }
 
     public Position move(Position currentPosition, Direction direction) {
-        int newX=currentPosition.getCoordinates().getxCoordinate();
-        int newY= currentPosition.getCoordinates().getyCoordinate();
+        int newX=currentPosition.getCoordinates().getXCoordinate();
+        int newY= currentPosition.getCoordinates().getXCoordinate();
         if(currentPosition != null){
             switch(direction){
                 case SOUTH:
-                    newY=currentPosition.getCoordinates().getyCoordinate()-1;
+                    newY=currentPosition.getCoordinates().getXCoordinate()-1;
                     break;
                 case NORTH:
-                    newY=currentPosition.getCoordinates().getyCoordinate()+1;
+                    newY=currentPosition.getCoordinates().getXCoordinate()+1;
                     break;
                 case WEST:
-                    newX=currentPosition.getCoordinates().getxCoordinate()-1;
+                    newX=currentPosition.getCoordinates().getXCoordinate()-1;
                     break;
                 case EAST:
-                    newX=currentPosition.getCoordinates().getxCoordinate()+1;
+                    newX=currentPosition.getCoordinates().getXCoordinate()+1;
                     break;
             }
         }
