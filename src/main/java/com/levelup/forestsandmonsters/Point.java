@@ -1,10 +1,10 @@
 package com.levelup.forestsandmonsters;
 
+@Data
 public class Point {
-   int xCoordinate;
-   int yCoordinate;
-public void setXCoordinate(int i) {
-}
-public void setYCoordinate(int i) {
-}
+  public int xCoordinate;
+  public int yCoordinate;
+
+
+
 }

@@ -16,7 +16,8 @@ public class PositionTest {
         Position position=new Position(xCoordinate,yCoordinate);
         assertNotNull(position);
         assertNotNull(position.getCoordinates());
-        
+        //assert the coordinates
+        assertNotNull(position.getCoordinates());
 
 
 
