@@ -1,10 +1,13 @@
 package com.levelup.forestsandmonsters;
 
 import java.awt.Point;
+import com.levelup.forestsandmonsters.cli.Character;
 
 public class GameController {
 
     static final String DEFAULT_CHARACTER_NAME = "FlyingDragons";
+    
+
 
     public class GameStatus {
         // TODO: Add other status data
@@ -15,9 +18,13 @@ public class GameController {
     }
 
     GameStatus status;
+    Character character;
 
     public GameController() {
         status = new GameStatus();
+         //Instantiate character
+         character = new Character();
+       
     }
 
     // TODO: Ensure this AND CLI commands match domain model
@@ -25,26 +32,32 @@ public class GameController {
         NORTH, SOUTH, EAST, WEST
     }
 
-    // Pre-implemented to demonstrate ATDD
-    // TODO: Update this if it does not match your design
     public void createCharacter(String name) {
         if (name != null && !name.equals("")) {
             status.characterName = name;
+            character.setName(name);
         } else {
             status.characterName = DEFAULT_CHARACTER_NAME;
+            character.setName(DEFAULT_CHARACTER_NAME);
         }
+
+       
     }
 
     public void startGame() {
         // TODO: Implement startGame - Should probably create tiles and put the character
         // on them?
         // TODO: Should also update the game results?
+         
     }
 
     public GameStatus getStatus() {
         return this.status;
     }
 
+    public Character getCharacter() {
+        return this.character;
+    }
     public void move(DIRECTION directionToMove) {
         // TODO: Implement move - should call something on another class
         // TODO: Should probably also update the game results
