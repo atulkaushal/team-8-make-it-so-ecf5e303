@@ -25,6 +25,10 @@ public class GameControllerTest {
        assertEquals("FlyingDragons",gameController.status.characterName);
     }
     //Valid Name
-    
+    @Test
+    public void validateCharacterName() {
+        gameController.createCharacter("Titans");
+       assertEquals("Titans",gameController.status.characterName);
+    }
 
 }
