@@ -1,10 +1,10 @@
 package com.levelup.forestsandmonsters.cli;
 
-import org.hibernate.validator.cfg.defs.PositiveDef;
-
 import com.levelup.forestsandmonsters.Position;
 
 public class GameMap {
+    private int numPositions= 100;
+    
     public GameMap(){
     }
 
@@ -41,6 +41,11 @@ public class GameMap {
         position.getCoordinates().getXCoordinate() <= 9 &&
         position.getCoordinates().getYCoordinate() >=0 &&
         position.getCoordinates().getYCoordinate() <= 9);
+    }
+
+
+    public int getTotalPositions() {
+        return this.numPositions;
     }
 
 }

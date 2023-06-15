@@ -1,6 +1,5 @@
 package com.levelup.forestsandmonsters;
 
-import com.levelup.forestsandmonsters.Position;
 import com.levelup.forestsandmonsters.cli.Direction;
 import com.levelup.forestsandmonsters.cli.GameMap;
 

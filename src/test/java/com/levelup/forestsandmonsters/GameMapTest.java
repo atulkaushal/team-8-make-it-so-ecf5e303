@@ -61,4 +61,10 @@ public class GameMapTest {
         assertEquals(newPosition.coordinates.xCoordinate, 0);
         assertEquals(newPosition.coordinates.yCoordinate, 0);
     }
+
+    @Test
+    public void testTotalPositionsAre100()
+    {
+        assertEquals(100,testObj.getTotalPositions());
+    }
 }
