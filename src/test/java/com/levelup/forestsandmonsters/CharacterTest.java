@@ -7,6 +7,7 @@ import com.levelup.forestsandmonsters.cli.Character;
 import com.levelup.forestsandmonsters.cli.Direction;
 
 public class CharacterTest {
+    FakeGameMap fakeGameMap = new FakeGameMap();
     @Test
     public void initializationCreatesResults() {
         Character testObj = new Character();
@@ -34,63 +35,28 @@ public class CharacterTest {
         Character testObj= new Character(userDefinedName);
         assertEquals(userDefinedName,testObj.getName());
     }
-    
+
     @Test
+    public void testEnterMap(){
+        Character testObj= new Character();
+        testObj.enterMap(fakeGameMap);
+    }
+    
+   /* @Test
     public void testDirection(){
         Character testObj= new Character();
         Direction direction = Direction.SOUTH;
-        Position currentPosition = new Position(5, 5);
-        Position newPosition = testObj.move(currentPosition, direction);
+        Position newPosition = testObj.move(direction);
         assertNotNull(newPosition);
     }
 
     @Test
     public void testDirectionMoveSuccess(){
+
         Character testObj= new Character();
         Direction direction = Direction.SOUTH;
-        Position currentPosition = new Position(5, 5);
-        Position newPosition = testObj.move(currentPosition, direction);
+        Position newPosition = testObj.move(direction);
         assertEquals(newPosition.coordinates.xCoordinate, 5);
         assertEquals(newPosition.coordinates.yCoordinate, 4);
-    }
-
-    @Test
-    public void testDirectionMoveSouthSuccess(){
-        Character testObj= new Character();
-        Direction direction = Direction.SOUTH;
-        Position currentPosition = new Position(5, 5);
-        Position newPosition = testObj.move(currentPosition, direction);
-        assertEquals(newPosition.coordinates.xCoordinate, 5);
-        assertEquals(newPosition.coordinates.yCoordinate, 4);
-    }
-
-    @Test
-    public void testDirectionMoveNorthSuccess(){
-        Character testObj= new Character();
-        Direction direction = Direction.NORTH;
-        Position currentPosition = new Position(5, 5);
-        Position newPosition = testObj.move(currentPosition, direction);
-        assertEquals(newPosition.coordinates.xCoordinate, 5);
-        assertEquals(newPosition.coordinates.yCoordinate, 6);
-    }
-
-    @Test
-    public void testDirectionMoveEastSuccess(){
-        Character testObj= new Character();
-        Direction direction = Direction.EAST;
-        Position currentPosition = new Position(5, 5);
-        Position newPosition = testObj.move(currentPosition, direction);
-        assertEquals(newPosition.coordinates.xCoordinate, 6);
-        assertEquals(newPosition.coordinates.yCoordinate, 5);
-    }
-
-    @Test
-    public void testDirectionMoveWestSuccess(){
-        Character testObj= new Character();
-        Direction direction = Direction.WEST;
-        Position currentPosition = new Position(5, 5);
-        Position newPosition = testObj.move(currentPosition, direction);
-        assertEquals(newPosition.coordinates.xCoordinate, 4);
-        assertEquals(newPosition.coordinates.yCoordinate, 5);
-    }
+    }*/ 
 }

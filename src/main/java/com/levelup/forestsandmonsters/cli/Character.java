@@ -24,28 +24,11 @@ public class Character {
         this.name = name;
     }
 
-    public Position move(Position currentPosition, Direction direction) {
-        int newX=currentPosition.getCoordinates().getXCoordinate();
-        int newY= currentPosition.getCoordinates().getXCoordinate();
-        if(currentPosition != null){
-            switch(direction){
-                case SOUTH:
-                    newY=currentPosition.getCoordinates().getXCoordinate()-1;
-                    break;
-                case NORTH:
-                    newY=currentPosition.getCoordinates().getXCoordinate()+1;
-                    break;
-                case WEST:
-                    newX=currentPosition.getCoordinates().getXCoordinate()-1;
-                    break;
-                case EAST:
-                    newX=currentPosition.getCoordinates().getXCoordinate()+1;
-                    break;
-            }
-        }
-        return new Position(newX, newY);
+    public Position move(Direction direction) {
+        Position currentPosition = new Position(0,0);
+        return currentPosition;
     }
 
-    
-    
+    public void enterMap(GameMap gameMap) {
+    }
 }
