@@ -13,4 +13,14 @@ this.xCoordinate = xCoordinate;
 this.yCoordinate = yCoordinate;
 }
 
+
+public Object getXCoordinate() {
+    return xCoordinate;
+}
+
+
+public Object getYCoordinate() {
+    return yCoordinate;
+}
+
 }

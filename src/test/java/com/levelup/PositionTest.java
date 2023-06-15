@@ -1,6 +1,7 @@
 package com.levelup;
 
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
@@ -11,15 +12,14 @@ public class PositionTest {
     public void initializationPosition() {
 
 
-        int xCoordinate=0;
-        int yCoordinate=0;
+        int xCoordinate=50;
+        int yCoordinate=100;
         Position position=new Position(xCoordinate,yCoordinate);
         assertNotNull(position);
         assertNotNull(position.getCoordinates());
         //assert the coordinates
-        assertNotNull(position.getCoordinates());
-
-
+        assertEquals(50, position.getCoordinates().getXCoordinate());
+        assertEquals(100, position.getCoordinates().getYCoordinate());
 
     }
     
