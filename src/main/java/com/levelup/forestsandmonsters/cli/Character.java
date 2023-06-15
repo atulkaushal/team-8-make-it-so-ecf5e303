@@ -4,7 +4,8 @@ import com.levelup.forestsandmonsters.Position;
 import com.levelup.forestsandmonsters.cli.Direction;
 
 public class Character {
-
+    private Position currentPosition;
+    private GameMap gameMap;
     public Character(){
         this.name=DEFAULT_CHARACTER_NAME;
     }
@@ -25,10 +26,18 @@ public class Character {
     }
 
     public Position move(Direction direction) {
-        Position currentPosition = new Position(0,0);
-        return currentPosition;
+        Position currentPosition = getPosition();
+        Position newPosition = gameMap.calculatePosition(currentPosition, direction);
+        currentPosition = newPosition;
+        return newPosition;
     }
 
     public void enterMap(GameMap gameMap) {
+        this.currentPosition = new Position(0, 0);
+        this.gameMap = gameMap;
+    }
+
+    public Position getPosition() {
+        return currentPosition;
     }
 }

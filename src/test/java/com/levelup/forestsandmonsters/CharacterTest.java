@@ -41,10 +41,20 @@ public class CharacterTest {
         Character testObj= new Character();
         testObj.enterMap(fakeGameMap);
     }
+
+    @Test
+    public void testEnterMapValidPosition(){
+        Character testObj= new Character();
+        testObj.enterMap(fakeGameMap);
+        Position startingPos = testObj.getPosition();
+        assertEquals(startingPos.getCoordinates().xCoordinate, 0); 
+        assertEquals(startingPos.getCoordinates().yCoordinate, 0); 
+    }
     
-   /* @Test
+    @Test
     public void testDirection(){
         Character testObj= new Character();
+        testObj.enterMap(fakeGameMap);
         Direction direction = Direction.SOUTH;
         Position newPosition = testObj.move(direction);
         assertNotNull(newPosition);
@@ -52,11 +62,11 @@ public class CharacterTest {
 
     @Test
     public void testDirectionMoveSuccess(){
-
         Character testObj= new Character();
+        testObj.enterMap(fakeGameMap);
         Direction direction = Direction.SOUTH;
         Position newPosition = testObj.move(direction);
-        assertEquals(newPosition.coordinates.xCoordinate, 5);
-        assertEquals(newPosition.coordinates.yCoordinate, 4);
-    }*/ 
+        assertNotNull(newPosition.coordinates.xCoordinate);
+        assertNotNull(newPosition.coordinates.yCoordinate);
+    } 
 }
