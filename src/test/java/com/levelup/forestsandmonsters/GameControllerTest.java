@@ -19,7 +19,12 @@ public class GameControllerTest {
     }
 
     //Null Scenario
-
+    @Test
+    public void validateNullCharacterName() {
+        gameController.createCharacter(null);
+       assertEquals("FlyingDragons",gameController.status.characterName);
+    }
     //Valid Name
     
+
 }
