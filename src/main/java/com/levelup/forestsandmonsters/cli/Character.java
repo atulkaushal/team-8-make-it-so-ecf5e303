@@ -1,6 +1,7 @@
 package com.levelup.forestsandmonsters.cli;
 
 import com.levelup.forestsandmonsters.Position;
+import com.levelup.forestsandmonsters.cli.Direction;
 
 public class Character {
 
@@ -24,8 +25,25 @@ public class Character {
     }
 
     public Position move(Position currentPosition, Direction direction) {
-        Position newPos = new Position (1,1);
-        return newPos;
+        int newX=currentPosition.getCoordinates().getxCoordinate();
+        int newY= currentPosition.getCoordinates().getyCoordinate();
+        if(currentPosition != null){
+            switch(direction){
+                case SOUTH:
+                    newY=currentPosition.getCoordinates().getyCoordinate()-1;
+                    break;
+                case NORTH:
+                    newY=currentPosition.getCoordinates().getyCoordinate()+1;
+                    break;
+                case WEST:
+                    newX=currentPosition.getCoordinates().getxCoordinate()-1;
+                    break;
+                case EAST:
+                    newX=currentPosition.getCoordinates().getxCoordinate()+1;
+                    break;
+            }
+        }
+        return new Position(newX, newY);
     }
 
     

@@ -34,12 +34,23 @@ public class CharacterTest {
         Character testObj= new Character(userDefinedName);
         assertEquals(userDefinedName,testObj.getName());
     }
+    
     @Test
-    public void testDirectionSouth(){
+    public void testDirection(){
         Character testObj= new Character();
         Direction direction = Direction.SOUTH;
         Position currentPosition = new Position(5, 5);
         Position newPosition = testObj.move(currentPosition, direction);
         assertNotNull(newPosition);
+    }
+
+    @Test
+    public void testDirectionMoveSuccess(){
+        Character testObj= new Character();
+        Direction direction = Direction.SOUTH;
+        Position currentPosition = new Position(5, 5);
+        Position newPosition = testObj.move(currentPosition, direction);
+        assertEquals(newPosition.coordinates.xCoordinate, 5);
+        assertEquals(newPosition.coordinates.yCoordinate, 4);
     }
 }
