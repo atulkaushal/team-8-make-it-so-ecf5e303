@@ -13,4 +13,8 @@ public class GameStatus {
         return character.getName();
     }
 
+    public Object getCurrentPosition() {
+        return character.getPosition();
+    }
+
 }
