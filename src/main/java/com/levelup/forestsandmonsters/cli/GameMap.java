@@ -1,5 +1,7 @@
 package com.levelup.forestsandmonsters.cli;
 
+import org.hibernate.validator.cfg.defs.PositiveDef;
+
 import com.levelup.forestsandmonsters.Position;
 
 public class GameMap {
@@ -26,8 +28,19 @@ public class GameMap {
                     break;
             }
         }
-        return new Position(newX, newY);
+        Position position = new Position(newX, newY);
+        if (isPositionValid(position)) {
+           return position;
+        } else {
+            return currentPosition;
+        }
     }
 
+    boolean isPositionValid(Position position){
+        return (position.getCoordinates().getXCoordinate() >= 0 && 
+        position.getCoordinates().getXCoordinate() <= 9 &&
+        position.getCoordinates().getYCoordinate() >=0 &&
+        position.getCoordinates().getYCoordinate() <= 9);
+    }
 
 }

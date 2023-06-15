@@ -26,11 +26,11 @@ public class GameMapTest {
         assertEquals(newPosition.coordinates.yCoordinate, 4);
     }
 
-/*    @Test
+    @Test
     public void testDirectionMoveNorthSuccess(){
         Direction direction = Direction.NORTH;
         Position currentPosition = new Position(5, 5);
-        Position newPosition = testObj.move(currentPosition, direction);
+        Position newPosition = testObj.calculatePosition(currentPosition, direction);
         assertEquals(newPosition.coordinates.xCoordinate, 5);
         assertEquals(newPosition.coordinates.yCoordinate, 6);
     }
@@ -39,7 +39,7 @@ public class GameMapTest {
     public void testDirectionMoveEastSuccess(){
         Direction direction = Direction.EAST;
         Position currentPosition = new Position(5, 5);
-        Position newPosition = testObj.move(currentPosition, direction);
+        Position newPosition = testObj.calculatePosition(currentPosition, direction);
         assertEquals(newPosition.coordinates.xCoordinate, 6);
         assertEquals(newPosition.coordinates.yCoordinate, 5);
     }
@@ -48,7 +48,7 @@ public class GameMapTest {
     public void testDirectionMoveWestSuccess(){
         Direction direction = Direction.WEST;
         Position currentPosition = new Position(5, 5);
-        Position newPosition = testObj.move(currentPosition, direction);
+        Position newPosition = testObj.calculatePosition(currentPosition, direction);
         assertEquals(newPosition.coordinates.xCoordinate, 4);
         assertEquals(newPosition.coordinates.yCoordinate, 5);
     }
@@ -57,9 +57,8 @@ public class GameMapTest {
     public void testDirectionMoveSouthEastCorner(){
         Direction direction = Direction.WEST;
         Position currentPosition = new Position(0, 0);
-        Position newPosition = testObj.move(currentPosition, direction);
+        Position newPosition = testObj.calculatePosition(currentPosition, direction);
         assertEquals(newPosition.coordinates.xCoordinate, 0);
         assertEquals(newPosition.coordinates.yCoordinate, 0);
     }
-    */
 }
