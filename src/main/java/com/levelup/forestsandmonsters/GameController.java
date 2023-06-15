@@ -4,7 +4,7 @@ import java.awt.Point;
 
 public class GameController {
 
-    static final String DEFAULT_CHARACTER_NAME = "Character";
+    static final String DEFAULT_CHARACTER_NAME = "FlyingDragons";
 
     public class GameStatus {
         // TODO: Add other status data
