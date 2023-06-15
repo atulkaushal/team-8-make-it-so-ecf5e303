@@ -5,12 +5,11 @@ public class Position {
 
    public Position(int xCoordinate,int yCoordinate)
     {
-        this.coordinates=new Point();
-        coordinates.setXCoordinate(50);
-        coordinates.setYCoordinate(100);
+        this.coordinates=new Point(xCoordinate,yCoordinate);
+       
     }
 
-public Object getCoordinates() {
+public Point getCoordinates() {
     return coordinates;
 }
 
